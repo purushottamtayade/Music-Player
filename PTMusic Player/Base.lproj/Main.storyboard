@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +17,118 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CFY-IR-XMy">
+                                <rect key="frame" x="20" y="270" width="560" height="60"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="39b-oI-oro">
+                                        <rect key="frame" x="-2" y="0.0" width="564" height="31"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.027548536703670301" blue="0.4186456770321898" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="musicSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="X3C-op-7Vt"/>
+                                        </connections>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-sq-3C2">
+                                        <rect key="frame" x="0.0" y="30" width="560" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ1-V3-xEg">
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="30"/>
+                                                <color key="backgroundColor" red="0.1291739274" green="1" blue="0.98243068259999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="&lt;|">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2rb-Rr-fuG"/>
+                                                    <action selector="previousButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Hp-6M-EFk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWE-JB-YSo">
+                                                <rect key="frame" x="94" y="0.0" width="91" height="30"/>
+                                                <color key="backgroundColor" red="0.12917392737924527" green="1" blue="0.98243068258083421" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Play">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b7I-wA-mkr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYH-LG-nvX">
+                                                <rect key="frame" x="188" y="0.0" width="91" height="30"/>
+                                                <color key="backgroundColor" red="0.1291739274" green="1" blue="0.98243068259999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="|&gt;">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoU-bx-X6o"/>
+                                                    <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37l-bo-woC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdF-j3-XWJ">
+                                                <rect key="frame" x="282" y="0.0" width="90" height="30"/>
+                                                <color key="backgroundColor" red="0.12917392737924527" green="1" blue="0.98243068258083421" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Stop">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYB-63-3Z6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTu-VH-qpk">
+                                                <rect key="frame" x="375" y="0.0" width="91" height="30"/>
+                                                <color key="backgroundColor" red="0.12917392737924527" green="1" blue="0.98243068258083421" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Record">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="recordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVR-12-vRr"/>
+                                                </connections>
+                                            </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-e3-4gB">
+                                                <rect key="frame" x="467" y="0.0" width="95" height="31"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="1" green="0.044099130418969401" blue="0.40794572456195777" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="volumeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="SJr-Mo-3OT"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="QWE-JB-YSo" firstAttribute="width" secondItem="vJ1-V3-xEg" secondAttribute="width" id="2tP-x0-ENK"/>
+                                            <constraint firstItem="Gn5-e3-4gB" firstAttribute="height" secondItem="vJ1-V3-xEg" secondAttribute="height" id="6pW-zl-5N1"/>
+                                            <constraint firstItem="cdF-j3-XWJ" firstAttribute="height" secondItem="vJ1-V3-xEg" secondAttribute="height" id="716-OM-ffY"/>
+                                            <constraint firstItem="Gn5-e3-4gB" firstAttribute="width" secondItem="vJ1-V3-xEg" secondAttribute="width" id="FSW-uD-Uwu"/>
+                                            <constraint firstItem="hTu-VH-qpk" firstAttribute="height" secondItem="vJ1-V3-xEg" secondAttribute="height" id="kwt-WS-mdi"/>
+                                            <constraint firstItem="QWE-JB-YSo" firstAttribute="height" secondItem="vJ1-V3-xEg" secondAttribute="height" id="lg1-cn-TdB"/>
+                                            <constraint firstItem="hTu-VH-qpk" firstAttribute="width" secondItem="vJ1-V3-xEg" secondAttribute="width" id="vxe-uM-jGc"/>
+                                            <constraint firstItem="fYH-LG-nvX" firstAttribute="width" secondItem="vJ1-V3-xEg" secondAttribute="width" id="vyc-6o-04G"/>
+                                            <constraint firstItem="fYH-LG-nvX" firstAttribute="height" secondItem="vJ1-V3-xEg" secondAttribute="height" id="wJn-EJ-2rg"/>
+                                            <constraint firstItem="cdF-j3-XWJ" firstAttribute="width" secondItem="vJ1-V3-xEg" secondAttribute="width" id="zYA-bP-gzG"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aMl-sq-3C2" firstAttribute="leading" secondItem="CFY-IR-XMy" secondAttribute="leading" id="Rir-Hs-O5x"/>
+                                    <constraint firstItem="39b-oI-oro" firstAttribute="leading" secondItem="CFY-IR-XMy" secondAttribute="leading" id="eUY-Gy-pZU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CFY-IR-XMy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ogx-R8-XFP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CFY-IR-XMy" secondAttribute="trailing" id="Vvb-OF-jdb"/>
+                            <constraint firstItem="CFY-IR-XMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hzU-i1-Ryx"/>
+                            <constraint firstItem="CFY-IR-XMy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tgS-sB-ych"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonPlay" destination="QWE-JB-YSo" id="AVS-bs-e3P"/>
+                        <outlet property="buttonRecord" destination="hTu-VH-qpk" id="G3w-D3-Sb6"/>
+                        <outlet property="buttonStop" destination="cdF-j3-XWJ" id="KvH-Vt-N1V"/>
+                        <outlet property="sliderMusic" destination="39b-oI-oro" id="4rq-aB-n8E"/>
+                        <outlet property="sliderVOLUME" destination="Gn5-e3-4gB" id="HuV-H5-X7p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

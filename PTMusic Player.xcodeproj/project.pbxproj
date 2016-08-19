@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77999FC91D5B3E71004A6A58 /* MitwaaCopy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77999FC81D5B3E71004A6A58 /* MitwaaCopy.mp3 */; };
+		77999FCB1D5B4AF9004A6A58 /* FlyingJatt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77999FCA1D5B4AF9004A6A58 /* FlyingJatt.mp3 */; };
 		77A54BB01D58B4AD00615961 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A54BAF1D58B4AD00615961 /* main.m */; };
 		77A54BB31D58B4AD00615961 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A54BB21D58B4AD00615961 /* AppDelegate.m */; };
 		77A54BB61D58B4AD00615961 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A54BB51D58B4AD00615961 /* ViewController.m */; };
 		77A54BB91D58B4AD00615961 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A54BB71D58B4AD00615961 /* Main.storyboard */; };
 		77A54BBB1D58B4AD00615961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A54BBA1D58B4AD00615961 /* Assets.xcassets */; };
 		77A54BBE1D58B4AD00615961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A54BBC1D58B4AD00615961 /* LaunchScreen.storyboard */; };
+		77A54BC61D58B83E00615961 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A54BC51D58B83E00615961 /* AVFoundation.framework */; };
+		77A54BC81D58B8BA00615961 /* Mitwaa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77A54BC71D58B8BA00615961 /* Mitwaa.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77999FC81D5B3E71004A6A58 /* MitwaaCopy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MitwaaCopy.mp3; sourceTree = "<group>"; };
+		77999FCA1D5B4AF9004A6A58 /* FlyingJatt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FlyingJatt.mp3; sourceTree = "<group>"; };
 		77A54BAB1D58B4AD00615961 /* PTMusic Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTMusic Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A54BAF1D58B4AD00615961 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77A54BB11D58B4AD00615961 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		77A54BBA1D58B4AD00615961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77A54BBD1D58B4AD00615961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77A54BBF1D58B4AD00615961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77A54BC51D58B83E00615961 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		77A54BC71D58B8BA00615961 /* Mitwaa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mitwaa.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A54BC61D58B83E00615961 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 		77A54BA21D58B4AD00615961 = {
 			isa = PBXGroup;
 			children = (
+				77A54BC51D58B83E00615961 /* AVFoundation.framework */,
 				77A54BAD1D58B4AD00615961 /* PTMusic Player */,
 				77A54BAC1D58B4AD00615961 /* Products */,
 			);
@@ -58,6 +68,9 @@
 		77A54BAD1D58B4AD00615961 /* PTMusic Player */ = {
 			isa = PBXGroup;
 			children = (
+				77A54BC71D58B8BA00615961 /* Mitwaa.mp3 */,
+				77999FCA1D5B4AF9004A6A58 /* FlyingJatt.mp3 */,
+				77999FC81D5B3E71004A6A58 /* MitwaaCopy.mp3 */,
 				77A54BB11D58B4AD00615961 /* AppDelegate.h */,
 				77A54BB21D58B4AD00615961 /* AppDelegate.m */,
 				77A54BB41D58B4AD00615961 /* ViewController.h */,
@@ -137,8 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A54BBE1D58B4AD00615961 /* LaunchScreen.storyboard in Resources */,
+				77999FCB1D5B4AF9004A6A58 /* FlyingJatt.mp3 in Resources */,
+				77999FC91D5B3E71004A6A58 /* MitwaaCopy.mp3 in Resources */,
 				77A54BBB1D58B4AD00615961 /* Assets.xcassets in Resources */,
 				77A54BB91D58B4AD00615961 /* Main.storyboard in Resources */,
+				77A54BC81D58B8BA00615961 /* Mitwaa.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +318,7 @@
 				77A54BC41D58B4AD00615961 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
